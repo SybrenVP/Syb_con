@@ -267,3 +267,17 @@ E:\Syb_con\Syb_controller\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cac
 E:\Syb_con\Syb_controller\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Syb_con\Syb_controller\obj\Debug\Assembly-CSharp.dll
 E:\Syb_con\Syb_controller\obj\Debug\Assembly-CSharp.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mono.CecilX.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mono.CecilX.Mdb.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mono.CecilX.Pdb.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mono.CecilX.Rocks.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Telepathy.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Boo.Lang.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\UnityEditor.UI.dll
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.Weaver.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.Authenticators.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.Components.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.Examples.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\Mirror.Editor.pdb
+E:\Syb_con\Syb_controller\Temp\bin\Debug\UnityEditor.UI.xml

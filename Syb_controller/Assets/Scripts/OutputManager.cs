@@ -30,7 +30,10 @@ public class OutputManager : MonoBehaviour
             Quaternion deviceRot = _deviceGyro.attitude;
             Debug.Log(deviceRot.eulerAngles);
         }
+    }
 
-        
+    public Vector3 GetGyro()
+    {
+        return _deviceGyro.attitude.eulerAngles;
     }
 }
