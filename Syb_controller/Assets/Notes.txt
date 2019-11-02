@@ -1,0 +1,3 @@
+How to access the app running on the phone? 
+	1. Try finding a way to use bluetooth
+	2. Connect using LAN, (server ip and port number) (like droidCam)
