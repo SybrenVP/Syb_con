@@ -4,9 +4,12 @@ using UnityEngine;
 using Mirror;
 using System.Net;
 using System.Net.Sockets;
+using System;
 
 public class NetworkServerUI : NetworkManager
 {
+    public static Vector3 ClientGyro;
+    
     private void OnGUI()
     {
         string ipAddress = LocalIPAddress();
@@ -33,11 +36,45 @@ public class NetworkServerUI : NetworkManager
     void Start()
     {
         NetworkServer.Listen(2500);
+        NetworkServer.RegisterHandler(888, ServerReceiveMessage);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void ServerReceiveMessage(NetworkMessage message)
+    {
+        StringMessage msg = new StringMessage();
+        msg.value = message.ReadMessage<StringMessage>().value;
+
+        ClientGyro = StringToVector3(msg.value);
+    }
+
+    public Vector3 StringToVector3(string sVector)
+    {
+        // Remove the parentheses
+        if (sVector.StartsWith("(") && sVector.EndsWith(")"))
+        {
+            sVector = sVector.Substring(1, sVector.Length - 2);
+        }
+
+        // split the items
+        string[] sArray = sVector.Split(',');
+
+        // store as a Vector3
+        Vector3 result = new Vector3(
+            float.Parse(sArray[0]),
+            float.Parse(sArray[1]),
+            float.Parse(sArray[2]));
+
+        return result;
+    }
+
+    public static Vector3 GetClientGyro()
+    {
+        return ClientGyro;
     }
 }

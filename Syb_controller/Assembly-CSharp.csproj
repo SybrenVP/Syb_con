@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControllerNetworking.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\NetworkClientUI.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\GameScripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\OutputManager.cs" />
     <None Include="Assets\Mirror\Readme.txt" />
@@ -270,15 +271,6 @@
     <Reference Include="nunit.framework">
       <HintPath>E:/Unity2019.1.10/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX">
       <HintPath>E:/Syb_con/Syb_controller/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
@@ -288,11 +280,20 @@
     <Reference Include="Mono.CecilX.Pdb">
       <HintPath>E:/Syb_con/Syb_controller/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.CecilX.Rocks">
+      <HintPath>E:/Syb_con/Syb_controller/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="Telepathy">
       <HintPath>E:/Syb_con/Syb_controller/Assets/Mirror/Runtime/Transport/Telepathy/Telepathy.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX.Rocks">
-      <HintPath>E:/Syb_con/Syb_controller/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>E:/Syb_con/Syb_controller/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>E:/Unity2019.1.10/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

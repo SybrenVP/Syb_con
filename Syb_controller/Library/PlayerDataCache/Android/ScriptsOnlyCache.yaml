@@ -28,16 +28,22 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9584}
+      Script: {instanceID: 9280}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 15858}
+      Script: {instanceID: 9764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 25a6891c8318d80586b9cc7588ed171b
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: TelepathyTransport
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -58,6 +64,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 4e55399bb1b81f08ab790913f62fbbac
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -70,10 +82,28 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: dae31b340a76a5f475899e604343a314
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 8eb11f41c8ff401e699b7cf075ef1775
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkStartPosition
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -466,13 +496,25 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: d5b39c54cd3b8db955940e7482d69ad7
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: Spawner
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d16d442ab11dac527c96d3ab64ab0783
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OutputManager
@@ -482,6 +524,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 28df2042e796f19c23dba2f93cb21daf
+    assemblyName: Mirror.dll
+    namespaceName: Mirror.Websocket
+    className: WebsocketTransport
   - hash:
       serializedVersion: 2
       Hash: 00274a21279f5cb831ce20f895049e38
@@ -496,6 +544,18 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 8eb11f41c8ff401e699b7cf075ef1775
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkClientUI
+  - hash:
+      serializedVersion: 2
+      Hash: f24783ee570eed24fd8d616ee6dde153
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: MultiplexTransport
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -506,6 +566,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
     className: AnalyticsTracker
+  - hash:
+      serializedVersion: 2
+      Hash: a962c73c6cc78d6d221f2273cab0916d
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.ListServer
+    className: ListServer
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -526,10 +592,34 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 6269de7b2e8700c47e4b84336de4b7eb
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: ZoneHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 2ff63c6dc445e346b82540e6c29d6027
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkRoomManager
+  - hash:
+      serializedVersion: 2
+      Hash: 991d2e8f56cd6070136c2ea5db7ccd6d
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Tanks
+    className: Tank
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
+  - hash:
+      serializedVersion: 2
+      Hash: aeb08a86525affb63f874f721c2d2d37
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkServerUI
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -544,10 +634,28 @@ ScriptsOnlyBuild:
     className: AnalyticsEventTrackerEditor
   - hash:
       serializedVersion: 2
+      Hash: c3f50d4af56263cd729aceaf1500aa8c
+    assemblyName: Mirror.Authenticators.dll
+    namespaceName: Mirror.Authenticators
+    className: BasicAuthenticator
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: e87f50864f8a979f1228e8c69bd62658
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Pong
+    className: Ball
+  - hash:
+      serializedVersion: 2
+      Hash: 642121f3962151c4afdb1ae5668e8c6b
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -556,10 +664,46 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 13e30eb2c8f76fe973cddc0b73452449
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: Reward
+  - hash:
+      serializedVersion: 2
+      Hash: c177d6dc65292742571518e34ec88561
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: LLAPITransport
+  - hash:
+      serializedVersion: 2
+      Hash: 0f1630513cc66b78105bbe382d543f51
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkRoomPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 603c8b8304cc29c03b2725254a87efa8
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: AdditiveNetworkManager
+  - hash:
+      serializedVersion: 2
       Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 2980c0df7b3778bf189b83de420df5b7
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Basic
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
@@ -578,6 +722,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkLobbyPlayer
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -622,210 +772,6 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: ee0cef6caaac8ae485bfa82f000f0f7b
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 516824a435828eadd660ef2f1658a48e
-    assemblyName: Unity.Analytics.DataPrivacy.dll
-    namespaceName: UnityEngine.Analytics
-    className: DataPrivacyButton
-  - hash:
-      serializedVersion: 2
-      Hash: f336e086360abe49a3323e5f1583c35a
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AudioTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: MarkerTrack
-  - hash:
-      serializedVersion: 2
-      Hash: d791aa6007fa3640be1164ea75bb087d
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: 5372ed2ce39229b1ac910757999a8be2
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TextMeshPro
-  - hash:
-      serializedVersion: 2
-      Hash: 3165968ba45c74472d279ba04455fccb
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TMP_ColorGradient
-  - hash:
-      serializedVersion: 2
-      Hash: 8649814970b42d345b89944b862453cc
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TMP_SubMesh
-  - hash:
-      serializedVersion: 2
-      Hash: 8220b46879dc5e37db1b940c938f5744
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e9f5bb3b986d822cab7f60d5095fc404
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ControllerNetworking
-  - hash:
-      serializedVersion: 2
-      Hash: 25a6891c8318d80586b9cc7588ed171b
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: TelepathyTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 4e55399bb1b81f08ab790913f62fbbac
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: NetworkManagerHUD
-  - hash:
-      serializedVersion: 2
-      Hash: dae31b340a76a5f475899e604343a314
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Additive
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 8eb11f41c8ff401e699b7cf075ef1775
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: NetworkManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: NetworkStartPosition
-  - hash:
-      serializedVersion: 2
-      Hash: f3a8ccc18ad656ac8993b34a1b30984f
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: d5b39c54cd3b8db955940e7482d69ad7
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: Spawner
-  - hash:
-      serializedVersion: 2
-      Hash: 28df2042e796f19c23dba2f93cb21daf
-    assemblyName: Mirror.dll
-    namespaceName: Mirror.Websocket
-    className: WebsocketTransport
-  - hash:
-      serializedVersion: 2
-      Hash: f24783ee570eed24fd8d616ee6dde153
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: MultiplexTransport
-  - hash:
-      serializedVersion: 2
-      Hash: a962c73c6cc78d6d221f2273cab0916d
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.ListServer
-    className: ListServer
-  - hash:
-      serializedVersion: 2
-      Hash: 6269de7b2e8700c47e4b84336de4b7eb
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Additive
-    className: ZoneHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 2ff63c6dc445e346b82540e6c29d6027
-    assemblyName: Mirror.Components.dll
-    namespaceName: Mirror
-    className: NetworkRoomManager
-  - hash:
-      serializedVersion: 2
-      Hash: 991d2e8f56cd6070136c2ea5db7ccd6d
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Tanks
-    className: Tank
-  - hash:
-      serializedVersion: 2
-      Hash: c3f50d4af56263cd729aceaf1500aa8c
-    assemblyName: Mirror.Authenticators.dll
-    namespaceName: Mirror.Authenticators
-    className: BasicAuthenticator
-  - hash:
-      serializedVersion: 2
-      Hash: e87f50864f8a979f1228e8c69bd62658
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Pong
-    className: Ball
-  - hash:
-      serializedVersion: 2
-      Hash: 642121f3962151c4afdb1ae5668e8c6b
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 13e30eb2c8f76fe973cddc0b73452449
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: Reward
-  - hash:
-      serializedVersion: 2
-      Hash: c177d6dc65292742571518e34ec88561
-    assemblyName: Mirror.dll
-    namespaceName: Mirror
-    className: LLAPITransport
-  - hash:
-      serializedVersion: 2
-      Hash: 0f1630513cc66b78105bbe382d543f51
-    assemblyName: Mirror.Components.dll
-    namespaceName: Mirror
-    className: NetworkAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: f3a8ccc18ad656ac8993b34a1b30984f
-    assemblyName: Mirror.Components.dll
-    namespaceName: Mirror
-    className: NetworkRoomPlayer
-  - hash:
-      serializedVersion: 2
-      Hash: 603c8b8304cc29c03b2725254a87efa8
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Additive
-    className: AdditiveNetworkManager
-  - hash:
-      serializedVersion: 2
-      Hash: 2980c0df7b3778bf189b83de420df5b7
-    assemblyName: Mirror.Examples.dll
-    namespaceName: Mirror.Examples.Basic
-    className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: f3a8ccc18ad656ac8993b34a1b30984f
-    assemblyName: Mirror.Components.dll
-    namespaceName: Mirror
-    className: NetworkLobbyPlayer
-  - hash:
-      serializedVersion: 2
       Hash: 439093cf702544bde01983000fdfdc56
     assemblyName: Mirror.Examples.dll
     namespaceName: 
@@ -838,10 +784,28 @@ ScriptsOnlyBuild:
     className: NetworkBehaviour
   - hash:
       serializedVersion: 2
+      Hash: ee0cef6caaac8ae485bfa82f000f0f7b
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
       Hash: 2ff63c6dc445e346b82540e6c29d6027
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomManagerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 516824a435828eadd660ef2f1658a48e
+    assemblyName: Unity.Analytics.DataPrivacy.dll
+    namespaceName: UnityEngine.Analytics
+    className: DataPrivacyButton
+  - hash:
+      serializedVersion: 2
+      Hash: f336e086360abe49a3323e5f1583c35a
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioTrack
   - hash:
       serializedVersion: 2
       Hash: ad425eb6c32a6f6977115fef236ef55f
@@ -862,10 +826,28 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
+      Hash: e9f5bb3b986d822cab7f60d5095fc404
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControllerNetworking
+  - hash:
+      serializedVersion: 2
       Hash: 2ff63c6dc445e346b82540e6c29d6027
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkLobbyManager
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d791aa6007fa3640be1164ea75bb087d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
       Hash: edec34fa37ceb4e15d29a1e2697f1b00
@@ -886,6 +868,18 @@ ScriptsOnlyBuild:
     className: OfflineGUI
   - hash:
       serializedVersion: 2
+      Hash: 5372ed2ce39229b1ac910757999a8be2
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 3165968ba45c74472d279ba04455fccb
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
       Hash: 986df0dfab7ffbd155b81bbb8bacea63
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -898,23 +892,29 @@ ScriptsOnlyBuild:
     className: NetworkProximityChecker
   - hash:
       serializedVersion: 2
+      Hash: 8649814970b42d345b89944b862453cc
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
       Hash: e4fb2671f4e7782c0481d74d32ad6df2
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Tanks
     className: Projectile
   - hash:
       serializedVersion: 2
-      Hash: 8eb11f41c8ff401e699b7cf075ef1775
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkServerUI
+      Hash: 8220b46879dc5e37db1b940c938f5744
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 8eb11f41c8ff401e699b7cf075ef1775
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkClientUI
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
   platform: 13
   scenePathNames:
   - Assets/Scenes/Controller.unity
-  playerPath: E:/Syb_con/AndroidBuild/sybcon_V0.1.apk
+  playerPath: E:/Syb_con/AndroidBuild/sybcon_V0.2.apk

@@ -37,10 +37,14 @@ public class NetworkClientUI : NetworkManager
         }
         return localIP;
     }
-    void Start()
+    
+    static public void SendGyroOrientation(Vector3 gyro)
     {
-    }
-    void Update()
-    {
+        if(NetworkClient.isConnected)
+        {
+            StringMessage msg = new StringMessage();
+            msg.value = gyro.ToString();
+            NetworkClient.Send(888, msg);
+        }
     }
 }

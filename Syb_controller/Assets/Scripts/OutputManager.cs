@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
+using System;
 
 public class OutputManager : MonoBehaviour
 {
     private bool _gyroEnabled;
     private Gyroscope _deviceGyro;
+    public Vector3 GyroRotation;
 
     private void Start()
     {
@@ -25,15 +28,16 @@ public class OutputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SystemInfo.supportsGyroscope)
+        if(_gyroEnabled)
         {
-            Quaternion deviceRot = _deviceGyro.attitude;
-            Debug.Log(deviceRot.eulerAngles);
+            GyroRotation = _deviceGyro.attitude.eulerAngles;
+            //Debug.Log(GyroRotation);
+            NetworkClientUI.SendGyroOrientation(GyroRotation);
         }
     }
 
     public Vector3 GetGyro()
     {
-        return _deviceGyro.attitude.eulerAngles;
+        return GyroRotation;
     }
 }
