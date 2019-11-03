@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ControllerNetworking.cs" />
+    <Compile Include="Assets\Scripts\ControllerScripts\ControllerManager.cs" />
+    <Compile Include="Assets\Scripts\ControllerScripts\JoystickMode_output.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\NetworkClientUI.cs" />
     <Compile Include="Assets\Scripts\GameScripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\GameScripts\NetworkServerUI.cs" />
-    <Compile Include="Assets\Scripts\OutputManager.cs" />
     <None Include="Assets\Mirror\Readme.txt" />
     <None Include="Assets\Mirror\License.txt" />
     <None Include="Assets\Notes.txt" />

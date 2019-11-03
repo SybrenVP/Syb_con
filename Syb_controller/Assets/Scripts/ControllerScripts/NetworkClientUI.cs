@@ -6,6 +6,12 @@ using System.Net;
 using System.Net.Sockets;
 using UnityEngine.UI;
 
+public enum MessageTypes
+{
+    calibrate = 0,
+    orientation = 1
+}
+
 public class NetworkClientUI : NetworkManager
 {
 #pragma warning disable 649
@@ -14,7 +20,6 @@ public class NetworkClientUI : NetworkManager
     [SerializeField] private Text _status;
     [SerializeField] private Text _serverIPAddress;
 #pragma warning restore 649
-
 
     public string LocalIPAddress()
     {
@@ -31,14 +36,19 @@ public class NetworkClientUI : NetworkManager
         }
         return localIP;
     }
-    
-    static public void SendGyroOrientation(Vector3 gyro)
+
+    public void Calibrate()
+    {
+        StringMessage msg = new StringMessage();
+        msg.value = "";
+        SendToServer(msg, (short)(MessageTypes.calibrate));
+    }
+
+    static public void SendToServer(StringMessage msg, short msgType)
     {
         if(NetworkClient.isConnected)
         {
-            StringMessage msg = new StringMessage();
-            msg.value = gyro.ToString();
-            NetworkClient.Send(888, msg);
+            NetworkClient.Send(msgType, msg);
         }
     }
 
@@ -64,15 +74,5 @@ public class NetworkClientUI : NetworkManager
     public void Connect()
     {
         NetworkClient.Connect(_serverIPAddress.text);
-    }
-
-    public void Calibrate()
-    {
-        if(NetworkClient.isConnected)
-        {
-            StringMessage msg = new StringMessage();
-            msg.value = true.ToString();
-            NetworkClient.Send(887, msg);
-        }
     }
 }

@@ -4,11 +4,12 @@ using UnityEngine;
 using Mirror;
 using System;
 
-public class OutputManager : MonoBehaviour
+public class JoystickMode_output : MonoBehaviour
 {
     private bool _gyroEnabled;
     private Gyroscope _deviceGyro;
-    public Vector3 GyroRotation;
+    private Vector3 _gyroRotation;
+    private StringMessage _gyroMessage = new StringMessage();
 
     private void Start()
     {
@@ -25,20 +26,21 @@ public class OutputManager : MonoBehaviour
         }
         return false;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if(_gyroEnabled)
         {
-            var rot = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * _deviceGyro.attitude * new Quaternion(0,0,1,0);
-            GyroRotation = rot.eulerAngles;
-            //Debug.Log(GyroRotation);
-            NetworkClientUI.SendGyroOrientation(GyroRotation);
+            Quaternion rot = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * _deviceGyro.attitude * new Quaternion(0,0,1,0);
+            _gyroRotation = rot.eulerAngles;
+
+            _gyroMessage.value = _gyroRotation.ToString();
+            NetworkClientUI.SendToServer(_gyroMessage, (short)MessageTypes.orientation);
         }
     }
 
     public Vector3 GetGyro()
     {
-        return GyroRotation;
+        return _gyroRotation;
     }
 }
