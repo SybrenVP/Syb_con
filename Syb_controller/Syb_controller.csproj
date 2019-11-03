@@ -651,6 +651,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControllerNetworking.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\NetworkClientUI.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\GameScripts\NetworkServerUI.cs" />
     <Compile Include="Assets\Scripts\OutputManager.cs" />
   </ItemGroup>

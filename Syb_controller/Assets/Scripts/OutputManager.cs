@@ -30,7 +30,8 @@ public class OutputManager : MonoBehaviour
     {
         if(_gyroEnabled)
         {
-            GyroRotation = _deviceGyro.attitude.eulerAngles;
+            var rot = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * _deviceGyro.attitude * new Quaternion(0,0,1,0);
+            GyroRotation = rot.eulerAngles;
             //Debug.Log(GyroRotation);
             NetworkClientUI.SendGyroOrientation(GyroRotation);
         }

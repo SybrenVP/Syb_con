@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private Vector3 orientation;
-
+    static private Vector3 orientation;
+    static private Vector3 standardOrientation = new Vector3(0,0,0);
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,13 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         orientation = NetworkServerUI.GetClientGyro();
-        transform.rotation = Quaternion.Euler(orientation);
+        
+        Debug.Log(orientation);
+        transform.rotation = Quaternion.Euler(orientation - standardOrientation);
+    }
+
+    public static void Calibrate()
+    {
+        standardOrientation = orientation;
     }
 }

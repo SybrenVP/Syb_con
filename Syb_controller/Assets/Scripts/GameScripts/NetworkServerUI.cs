@@ -13,7 +13,7 @@ public class NetworkServerUI : NetworkManager
     private void OnGUI()
     {
         string ipAddress = LocalIPAddress();
-        GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipAddress);
+        //GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipAddress);
         GUI.Label(new Rect(20, Screen.height - 35, 100, 20), "Status: " + NetworkServer.active);
         GUI.Label(new Rect(20, Screen.height - 20, 100, 20), "Connected: " + NetworkServer.connections.Count);
     }
@@ -36,7 +36,8 @@ public class NetworkServerUI : NetworkManager
     void Start()
     {
         NetworkServer.Listen(2500);
-        NetworkServer.RegisterHandler(888, ServerReceiveMessage);
+        NetworkServer.RegisterHandler(888, ServerReceiveGyro);
+        NetworkServer.RegisterHandler(887, Calibrate);
     }
 
     // Update is called once per frame
@@ -45,12 +46,17 @@ public class NetworkServerUI : NetworkManager
         
     }
 
-    private void ServerReceiveMessage(NetworkMessage message)
+    private void ServerReceiveGyro(NetworkMessage message)
     {
         StringMessage msg = new StringMessage();
         msg.value = message.ReadMessage<StringMessage>().value;
 
         ClientGyro = StringToVector3(msg.value);
+    }
+
+    private void Calibrate(NetworkMessage message)
+    {
+        InputManager.Calibrate();
     }
 
     public Vector3 StringToVector3(string sVector)

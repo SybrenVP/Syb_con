@@ -4,23 +4,17 @@ using UnityEngine;
 using Mirror;
 using System.Net;
 using System.Net.Sockets;
+using UnityEngine.UI;
 
 public class NetworkClientUI : NetworkManager
 {
-    void OnGUI()
-    {
-        string ipAddress = LocalIPAddress();
-        GUI.Box(new Rect(10, Screen.height - 50, 100, 50), ipAddress);
-        GUI.Label(new Rect(20, Screen.height - 30, 100, 20), "Status: " + NetworkClient.isConnected);
-        
-        if(!NetworkClient.isConnected)
-        {
-            if(GUI.Button(new Rect(10,10,60,50), "Connect"))
-            {
-                NetworkClient.Connect("192.168.1.6");
-            }
-        }
-    }
+#pragma warning disable 649
+    [SerializeField] private Button _connectButton;
+    [SerializeField] private Text _ip;
+    [SerializeField] private Text _status;
+    [SerializeField] private Text _serverIPAddress;
+#pragma warning restore 649
+
 
     public string LocalIPAddress()
     {
@@ -45,6 +39,40 @@ public class NetworkClientUI : NetworkManager
             StringMessage msg = new StringMessage();
             msg.value = gyro.ToString();
             NetworkClient.Send(888, msg);
+        }
+    }
+
+    private void Start()
+    {
+        _ip.text = "Device IP: " + LocalIPAddress();
+    }
+
+    private void Update()
+    {
+        if(NetworkClient.isConnected)
+        {
+            _status.text = "Status: Connected";
+            _connectButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            _status.text = "Status: Not connected";
+            _connectButton.gameObject.SetActive(true);
+        }
+    }
+
+    public void Connect()
+    {
+        NetworkClient.Connect(_serverIPAddress.text);
+    }
+
+    public void Calibrate()
+    {
+        if(NetworkClient.isConnected)
+        {
+            StringMessage msg = new StringMessage();
+            msg.value = true.ToString();
+            NetworkClient.Send(887, msg);
         }
     }
 }
