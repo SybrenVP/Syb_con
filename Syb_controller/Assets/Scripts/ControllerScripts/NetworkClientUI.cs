@@ -19,7 +19,9 @@ public class NetworkClientUI : NetworkManager
     [SerializeField] private Text _ip;
     [SerializeField] private Text _status;
     [SerializeField] private Text _serverIPAddress;
+    [SerializeField] private ModesButtonManager _modesButtonManager;
 #pragma warning restore 649
+    private bool _receivedModes = false;
 
     public string LocalIPAddress()
     {
@@ -55,6 +57,7 @@ public class NetworkClientUI : NetworkManager
     private void Start()
     {
         _ip.text = "Device IP: " + LocalIPAddress();
+        NetworkClient.RegisterHandler(777, GetSupportedModes);
     }
 
     private void Update()
@@ -68,11 +71,33 @@ public class NetworkClientUI : NetworkManager
         {
             _status.text = "Status: Not connected";
             _connectButton.gameObject.SetActive(true);
+            _receivedModes = false;
         }
     }
 
     public void Connect()
     {
         NetworkClient.Connect(_serverIPAddress.text);
+    }
+
+    void GetSupportedModes(NetworkMessage message)
+    {
+        if (_receivedModes)
+            return;
+
+        StringMessage msg = new StringMessage();
+        msg.value = message.ReadMessage<StringMessage>().value;
+        string[] values = msg.value.Split(',');
+
+        _modesButtonManager.SetSupportedModes(bool.Parse(values[0]), bool.Parse(values[1]), bool.Parse(values[2]));
+    }
+
+    private void OnConnectedToServer()
+    {
+        //1. Ask server for available modes
+        //2. Switch to 'mode'-layer
+        StringMessage msg = new StringMessage();
+        msg.value = "";
+        SendToServer(msg, 886);
     }
 }

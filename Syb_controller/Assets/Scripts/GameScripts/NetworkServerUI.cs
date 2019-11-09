@@ -8,8 +8,23 @@ using System;
 
 public class NetworkServerUI : NetworkManager
 {
-    public static Vector3 ClientGyro;
-    
+    #region joystickVars
+    private static Vector3 ClientGyro;
+    #endregion
+
+    #region controllerVars
+    #endregion
+
+    #region wheelVars
+    #endregion
+
+    #region overallGames
+    [Header("Game variables")]
+    public bool supportJoystick = true;
+    public bool supportController = false;
+    public bool supportWheel = false;
+    #endregion
+
     private void OnGUI()
     {
         string ipAddress = LocalIPAddress();
@@ -38,6 +53,7 @@ public class NetworkServerUI : NetworkManager
         NetworkServer.Listen(2500);
         NetworkServer.RegisterHandler(888, ServerReceiveGyro);
         NetworkServer.RegisterHandler(887, Calibrate);
+        NetworkServer.RegisterHandler(886, SendAvailableModes);
     }
 
     private void ServerReceiveGyro(NetworkMessage message)
@@ -51,6 +67,15 @@ public class NetworkServerUI : NetworkManager
     private void Calibrate(NetworkMessage message)
     {
         InputManager.Calibrate();
+    }
+
+    
+    private void SendAvailableModes(NetworkMessage message)
+    {
+        StringMessage msg = new StringMessage();
+        msg.value = supportJoystick.ToString() + ',' + supportController.ToString() + ',' + supportWheel.ToString().ToString();
+
+        NetworkServer.SendToAll(777, msg);
     }
 
     public Vector3 StringToVector3(string sVector)
