@@ -6,7 +6,10 @@ public enum MenuLayers
 {
     None = 0,
     Connect = 1,
-    Modes = 2
+    Modes = 2,
+    JoystickMode = 3,
+    ControllerMode = 4,
+    SteeringWheelMode = 5
 }
 
 
@@ -28,5 +31,21 @@ public class MenuManager : MonoBehaviour
         _layers[(int)_activeLayer].SetActive(false);
         _activeLayer = layer;
         _layers[(int)_activeLayer].SetActive(true);
+    }
+
+    //button code
+    public void JoystickMode()
+    {
+        SetActiveLayer(MenuLayers.JoystickMode);
+    }
+
+    public void ControllerMode()
+    {
+        SetActiveLayer(MenuLayers.ControllerMode);
+    }
+
+    public void SteeringWheelMode()
+    {
+        SetActiveLayer(MenuLayers.SteeringWheelMode);
     }
 }

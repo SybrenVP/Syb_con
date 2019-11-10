@@ -1,8 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - JoystickMode_output
+    - MenuManager
+    - ModesButtonManager
     - NetworkClientUI
-    - OutputManager
     Mirror.dll:
     - Mirror.TelepathyTransport
     UnityEditor.Graphs.dll:
@@ -61,7 +63,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9764}
+      Script: {instanceID: 9692}
+    - Class: 114
+      Script: {instanceID: 9766}
+    - Class: 114
+      Script: {instanceID: 9940}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -553,10 +559,16 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: d16d442ab11dac527c96d3ab64ab0783
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: OutputManager
+    className: JoystickMode_output
+  - hash:
+      serializedVersion: 2
+      Hash: 66d6600f84ab2147679c87fa04f79bbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuManager
   - hash:
       serializedVersion: 2
       Hash: f08a111e17bb701f9c9ec57bb78d9920
@@ -583,7 +595,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 36ce0b08ebdaa90d814b0be7fd98327c
+      Hash: 6eff1229609f07399148533dfea208e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkClientUI
@@ -655,10 +667,16 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 8eb11f41c8ff401e699b7cf075ef1775
+      Hash: f39515f3495580a23925f72a91c883eb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NetworkServerUI
+  - hash:
+      serializedVersion: 2
+      Hash: 7f997b3fe6473d686ab75f8a462103f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ModesButtonManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -871,12 +889,6 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: e9f5bb3b986d822cab7f60d5095fc404
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ControllerNetworking
-  - hash:
-      serializedVersion: 2
       Hash: 2ff63c6dc445e346b82540e6c29d6027
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -962,4 +974,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Controller.unity
-  playerPath: E:/Syb_con/AndroidBuild/sybcon_V0.4.apk
+  playerPath: E:/Syb_con/AndroidBuild/sybcon_V0.5.apk

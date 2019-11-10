@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public enum MessageTypes
 {
-    calibrate = 0,
-    orientation = 1
+    calibrate = 1,
+    orientation = 2,
+    modes = 3
 }
 
 public class NetworkClientUI : NetworkManager
@@ -20,6 +21,7 @@ public class NetworkClientUI : NetworkManager
     [SerializeField] private Text _status;
     [SerializeField] private Text _serverIPAddress;
     [SerializeField] private ModesButtonManager _modesButtonManager;
+    [SerializeField] private MenuManager _menuManager;
 #pragma warning restore 649
     private bool _receivedModes = false;
 
@@ -66,6 +68,12 @@ public class NetworkClientUI : NetworkManager
         {
             _status.text = "Status: Connected";
             _connectButton.gameObject.SetActive(false);
+            if(!_receivedModes)
+            {
+                StringMessage msg = new StringMessage();
+                msg.value = "";
+                SendToServer(msg, (short)MessageTypes.modes);
+            }
         }
         else
         {
@@ -90,14 +98,7 @@ public class NetworkClientUI : NetworkManager
         string[] values = msg.value.Split(',');
 
         _modesButtonManager.SetSupportedModes(bool.Parse(values[0]), bool.Parse(values[1]), bool.Parse(values[2]));
-    }
-
-    private void OnConnectedToServer()
-    {
-        //1. Ask server for available modes
-        //2. Switch to 'mode'-layer
-        StringMessage msg = new StringMessage();
-        msg.value = "";
-        SendToServer(msg, 886);
+        _receivedModes = true;
+        _menuManager.SetActiveLayer(MenuLayers.Modes);
     }
 }

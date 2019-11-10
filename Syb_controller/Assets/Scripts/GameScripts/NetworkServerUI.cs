@@ -51,9 +51,9 @@ public class NetworkServerUI : NetworkManager
     void Start()
     {
         NetworkServer.Listen(2500);
-        NetworkServer.RegisterHandler(888, ServerReceiveGyro);
-        NetworkServer.RegisterHandler(887, Calibrate);
-        NetworkServer.RegisterHandler(886, SendAvailableModes);
+        NetworkServer.RegisterHandler((short)MessageTypes.orientation, ServerReceiveGyro);
+        NetworkServer.RegisterHandler((short)MessageTypes.calibrate, Calibrate);
+        NetworkServer.RegisterHandler((short)MessageTypes.modes, SendAvailableModes);
     }
 
     private void ServerReceiveGyro(NetworkMessage message)

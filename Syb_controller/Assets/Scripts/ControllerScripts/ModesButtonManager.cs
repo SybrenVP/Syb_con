@@ -8,6 +8,9 @@ public class ModesButtonManager : MonoBehaviour
 {
 #pragma warning disable 649
     [SerializeField] private List<Button> _buttons;
+    [SerializeField] private GameObject _joystickMode;
+    [SerializeField] private GameObject _controllerMode;
+    [SerializeField] private GameObject _steeringWheelMode;
 #pragma warning restore 649
     private bool _modesReceived;
     private bool _supportJoystick;
@@ -24,14 +27,42 @@ public class ModesButtonManager : MonoBehaviour
         _supportJoystick = joystick;
         _supportController = controller;
         _supportWheel = wheel;
-        _modesReceived = true;
+        SetButtonColors();
     }
 
-    private void Update()
+    private void SetButtonColors()
     {
-        if(_modesReceived)
+        //Joystick button
+        if (_supportJoystick)
         {
+            _buttons[0].image.color = Color.green;
+        }
+        else
+        {
+            _buttons[0].image.color = Color.red;
+            _buttons[0].interactable = false;
+        }
 
+        //controller button
+        if (_supportController)
+        {
+            _buttons[1].image.color = Color.green;
+        }
+        else
+        {
+            _buttons[1].image.color = Color.red;
+            _buttons[1].interactable = false;
+        }
+
+        //Steering wheel button
+        if (_supportWheel)
+        {
+            _buttons[2].image.color = Color.green;
+        }
+        else
+        {
+            _buttons[2].image.color = Color.red;
+            _buttons[2].interactable = false;
         }
     }
 }

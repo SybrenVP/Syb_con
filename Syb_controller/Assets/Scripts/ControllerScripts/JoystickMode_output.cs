@@ -11,7 +11,7 @@ public class JoystickMode_output : MonoBehaviour
     private Vector3 _gyroRotation;
     private StringMessage _gyroMessage = new StringMessage();
 
-    private void Start()
+    private void Awake()
     {
         _gyroEnabled = EnableGyro();
     }

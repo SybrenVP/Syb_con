@@ -1,0 +1,44 @@
+WE ARE HERE
+Changenotes v0.6
+1. Visuals: 
+	- BG for connect screen (BGs in general)
+	- Connect button
+	- Connection information
+
+Changenotes v0.7
+2. Clean up networking code for joystick (add comments)
+3. Calibration for joystick
+	Make it obvious how one would calibrate to use the joystick mode
+4. Limit the joystick's movement
+	to mimic real joystick behavior (use values between 0-1 with 1 being maxed out to one side)
+//Up to here should be finished by monday evening
+\-> Controller joystick mode is completely finished and should be ready for release...
+
+Changenotes v0.8
+5. Make airplane game using joystick mode
+
+Changenotesv1.0
+6. Start on steering wheel:
+	- Visuals
+	- parameters on the server
+7. Add calibration
+8. Limit wheel movements
+9. Look into multiplayer connections (networking code and other things)
+
+\-> Steering wheel mode is completely finished and should be ready for release...
+
+Changenotes v1.1
+10. Make couch co-op racing game
+
+Changenotes v2.0
+11. Start on normal controller:
+	- Visuals
+	- Make buttons/joystick and have their input be sent over the server
+
+\-> Standard controller mode is completely finished and should be ready for release...
+
+Changenotes v2.1
+12. Adapt Grave Rave to use standard controller mode
+
+\-> Everything set out from the start has been implemented. Release should be available after steering wheel implementation,
+	all releases after will be updates to the app and be other games.
