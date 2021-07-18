@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 using System;
 
 public class JoystickMode_output : MonoBehaviour
@@ -9,7 +8,7 @@ public class JoystickMode_output : MonoBehaviour
     private bool _gyroEnabled;
     private Gyroscope _deviceGyro;
     private Vector3 _gyroRotation;
-    private StringMessage _gyroMessage = new StringMessage();
+    private string _gyroMessage;
 
     private void Awake()
     {
@@ -34,8 +33,8 @@ public class JoystickMode_output : MonoBehaviour
             Quaternion rot = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * _deviceGyro.attitude * new Quaternion(0,0,1,0);
             _gyroRotation = rot.eulerAngles;
 
-            _gyroMessage.value = _gyroRotation.ToString();
-            NetworkClientUI.SendToServer(_gyroMessage, (short)MessageTypes.orientation);
+            //_gyroMessage.value = _gyroRotation.ToString();
+            //NetworkClientUI.SendToServer(_gyroMessage, (short)MessageTypes.orientation);
         }
     }
 
